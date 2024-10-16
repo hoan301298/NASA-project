@@ -6,7 +6,7 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "npm run watch --prefix server",
     "client": "npm start --prefix client",
-    "test": "cd server && jest",
+    "test": "npm test --prefix server && npm test --prefix client",
     "test-watch": "jest --watch",
     "deploy-cluster" : "npm run build --prefix client && npm run cluster --prefix server",
     "deploy": "concurrently \"npm run server\" \"npm run client\""
