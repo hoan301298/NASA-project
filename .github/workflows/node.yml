@@ -6,14 +6,20 @@ on:
     branches: [ main ]
 jobs:
   build:
+    env:
+      CI: true
+    strategy:
+      matrix: 
+        node-version: [14.x, 16.x]
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js version 20
+      - name: Use Node.js version ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm run --prefix client
+      - run: npm test
   # deploy:
   #   needs: build

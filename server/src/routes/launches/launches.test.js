@@ -1,6 +1,7 @@
 const request = require('supertest');
 const app = require('../../app');
 const { mongoConnect, mongoDisconnect } = require('../../service/mongo');
+const { loadPlanetsData } = require('../../models/planets.model');
 
 const completeLaunchData = {
     mission: 'USS Enterprise',
@@ -25,6 +26,7 @@ const launchDataWithInvalidDate = {
 describe('Launches API', () => {
     beforeAll(async () => {
         await mongoConnect();
+        await loadPlanetsData();
     });
 
     afterAll(async () => {
