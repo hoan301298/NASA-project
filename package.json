@@ -8,7 +8,7 @@
     "client": "npm start --prefix client",
     "test": "npm test --prefix server && npm test --prefix client",
     "test-watch": "jest --watch",
-    "deploy-cluster" : "npm run build --prefix client && npm run cluster --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
     "deploy": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
@@ -16,11 +16,9 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "concurrently": "^8.2.2",
-    "supertest": "^7.0.0"
+    "concurrently": "^8.2.2"
   },
   "dependencies": {
-    "jest": "^29.7.0",
-    "morgan": "^1.10.0"
+    "express": "^4.21.1"
   }
 }
