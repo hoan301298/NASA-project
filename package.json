@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-server && npm run install-client",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "npm run watch --prefix server",
     "client": "npm start --prefix client",
@@ -17,10 +20,5 @@
   "description": "",
   "devDependencies": {
     "concurrently": "^8.2.2"
-  },
-  "dependencies": {
-    "express": "^4.21.1",
-    "jest": "^29.7.0",
-    "supertest": "^7.0.0"
   }
 }
