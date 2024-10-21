@@ -11,7 +11,10 @@ mongoose.connection.on('error', (err) => {
 })
 
 async function mongoConnect() {
-    await mongoose.connect(Mongo_URL);
+    await mongoose.connect(Mongo_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
 }
 
 async function mongoDisconnect() {
