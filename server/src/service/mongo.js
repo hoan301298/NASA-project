@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-const Mongo_URL = process.env.Mongo_URL;
+const Mongo_URL = process.env.MONGO_URL;
 
 mongoose.connection.once('open', () => {
     console.log('MongoDB connection ready!');
