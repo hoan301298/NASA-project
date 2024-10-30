@@ -9,7 +9,7 @@ const { loadLaunchesData } = require('./models/launches.model');
 const server = http.createServer(app);
 const PORT = process.env.PORT;
 
-async function startServer () {
+async function startServer(){
     await mongoConnect();
     await loadPlanetsData();
     await loadLaunchesData();
@@ -18,6 +18,6 @@ async function startServer () {
     server.listen(PORT, () => {
         console.log(`Server is running on Port ${PORT}...`)
     });
-}
+};
 
 startServer();

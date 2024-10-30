@@ -11,8 +11,8 @@ function getPagination(query) {
         skip,
         limit,
     };
-}
+};
 
 module.exports = {
     getPagination
-}
+};
