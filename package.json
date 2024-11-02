@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "install-server": "npm install --prefix server",
-    "install-client": "npm install client",
+    "install-client": "npm install --prefix client",
     "install": "npm run install-server && npm run install-client",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "npm run watch --prefix server",
@@ -17,8 +17,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  }
+  "description": ""
 }
