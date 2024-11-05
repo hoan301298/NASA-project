@@ -6,13 +6,12 @@
     "install-server": "npm install --prefix server",
     "install-client": "npm install --prefix client",
     "install": "npm run install-server && npm run install-client",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "npm run watch --prefix server",
     "client": "npm start --prefix client",
     "test": "npm test --prefix server",
     "test-watch": "jest --watch",
     "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
-    "deploy": "concurrently \"npm run server\" \"npm run client\""
+    "deploy": "npm run build --prefix client && npm run server"
   },
   "keywords": [],
   "author": "",
