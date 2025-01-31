@@ -1,7 +1,6 @@
 # NASA Mission Control Project
 
 ## Public Website
-
 [Link](https://nasa-api-frontend-d41r.onrender.com/)
 
 ## Overview
